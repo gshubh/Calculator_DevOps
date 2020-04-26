@@ -1,10 +1,21 @@
 # Program make a simple calculator
 
-# This function adds two numbers 
+
+# This function takes two numbers
+def numbers ():
+    No1 = float(input("Enter first number: "))
+    No2 = float(input("Enter second number: "))
+    return No1, No2
+
+# This fucntion takes input from user
+def take_choice():
+    return input("Enter choice(0/1/2/3/4): ")
+
+# This function adds two numbers
 def add(x, y):
    return x + y
 
-# This function subtracts two numbers 
+# This function subtracts two numbers
 def subtract(x, y):
    return x - y
 
@@ -17,27 +28,49 @@ def divide(x, y):
    return x / y
 
 print("Select operation.")
+print(" ")
+print("0.Exit")
 print("1.Add")
 print("2.Subtract")
 print("3.Multiply")
 print("4.Divide")
+print(" ")
 
-# Take input from the user 
-choice = input("Enter choice(1/2/3/4): ")
+# Take input from the user
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+choice = take_choice ()
+print(" ")
 
-if choice == '1':
-   print(num1,"+",num2,"=", add(num1,num2))
+while (choice != '0'):
 
-elif choice == '2':
-   print(num1,"-",num2,"=", subtract(num1,num2))
+    if choice == '1':
+        num1, num2 = numbers()
+        print("Ans = ", add(num1,num2))
+        print(" ")
+        choice = take_choice ()
 
-elif choice == '3':
-   print(num1,"*",num2,"=", multiply(num1,num2))
+    elif choice == '2':
+        num1, num2 = numbers()
+        print("Ans = ", subtract(num1,num2))
+        print(" ")
+        choice = take_choice ()
 
-elif choice == '4':
-   print(num1,"/",num2,"=", divide(num1,num2))
-else:
-   print("Invalid input")
+    elif choice == '3':
+        num1, num2 = numbers()
+        print("Ans = ", multiply(num1,num2))
+        print(" ")
+        choice = take_choice ()
+
+    elif choice == '4':
+        num1, num2 = numbers()
+        print("Ans = ", divide(num1,num2))
+        print(" ")
+        choice = take_choice ()
+
+    else:
+        print("Invalid input! Enter the correct choice")
+        print(" ")
+        choice = take_choice ()
+
+if choice == '0':
+    print ("Calculator Exit")
