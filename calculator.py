@@ -39,7 +39,7 @@ print(" ")
 
 # Take input from the user
 
-choice = take_choice()
+choice = int(take_choice())
 print(" ")
 
 while (choice != '0'):
