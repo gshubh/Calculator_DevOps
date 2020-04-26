@@ -9,7 +9,7 @@ def numbers ():
 
 # This fucntion takes input from user
 def take_choice():
-    val = int(input("Enter choice(0/1/2/3/4): "))
+    val = input("Enter choice(0/1/2/3/4): ")
     return val;
 
 # This function adds two numbers
@@ -39,7 +39,7 @@ print(" ")
 
 # Take input from the user
 
-choice = int(take_choice())
+choice = take_choice()
 print(" ")
 
 while (choice != '0'):
