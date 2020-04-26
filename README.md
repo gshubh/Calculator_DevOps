@@ -1,2 +1,2 @@
 # Calculator_DevOps
-DevOps Pipeline is build for asimple calculator project 
+DevOps Pipeline is build for a simple calculator project 
