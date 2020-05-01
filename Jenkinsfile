@@ -13,11 +13,9 @@ pipeline {
         }
       }
     }
-    stages {
-      stage('Unit test') {
-        steps {
-          sh 'python -m unittest test'
-        }
+    stage('Unit test') {
+      steps {
+        sh 'python -m unittest test'
       }
     }
     stage('Deploy Image') {
