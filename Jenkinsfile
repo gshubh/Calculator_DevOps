@@ -18,6 +18,7 @@ pipeline {
        steps {
           sh 'python -m unittest test'
        }
+      }
     }
     stage('Deploy Image') {
       steps{
