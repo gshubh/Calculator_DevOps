@@ -31,7 +31,7 @@ class Calculator:
 
 if __name__ == '__main__':
 
-    obj = Calculator(3,4)
+    obj = Calculator(12,4)
     a = obj.add()
     print(a,"\n")
     s = obj.sub()
@@ -42,7 +42,13 @@ if __name__ == '__main__':
     print(d,"\n")
     obj = Calculator(5,6)
     a1 = obj.add()
-    print(a,"\n")
+    print(a1,"\n")
+    s1 = obj.sub()
+    print(s1,"\n")
+    m1 = obj.mul()
+    print(m1,"\n")
+    d1 = obj.div()
+    print(d1,"\n")
 
     logging.basicConfig(filename="logFile.txt",
                     filemode='a',
@@ -53,3 +59,6 @@ if __name__ == '__main__':
     logging.info(m)
     logging.info(d)
     logging.info(a1)
+    logging.info(s1)
+    logging.info(m1)
+    logging.info(d1)
