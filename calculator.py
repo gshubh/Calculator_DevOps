@@ -1,49 +1,55 @@
-# Object Oriented Code of Calculator
+import logging
 
 class Calculator:
-    def __init__(self, a, b):
-        self.a = a
+
+    def __init__(self,a,b):
+        self.a= a
         self.b = b
+        self.ans = None
 
     def add(self):
-        return self.a + self.b
+        print("Addition of: ",self.a, "and ",self.b)
+        self.ans = self.a + self.b
+        return self.ans
 
     def mul(self):
-        return self.a * self.b
+        print("Multiplication of:",self.a, "and ",self.b)
+
+        self.ans = self.a*self.b
+        return self.ans
 
     def div(self):
-        return self.a / self.b
+        print("Division of:" ,self.a ,"and " ,self.b)
+        self.ans = round(self.a/self.b,2)
+        return self.ans
 
     def sub(self):
-        return self.a - self.b
+        print("Subtraction of:" ,self.a ,"from " ,self.b)
+        self.ans = self.a-self.b
+        return self.ans
+
 
 if __name__ == '__main__':
 
-    print(" ")
-    print ("###########################Calculator Started#############################")
-    a = int(input("Enter first number: "))
-    b = int(input("Enter second number: "))
-    print(" ")
-    obj = Calculator(a, b)
-    choice = 1
+    obj = Calculator(3,4)
+    a = obj.add()
+    print(a,"\n")
+    s = obj.sub()
+    print(s,"\n")
+    m = obj.mul()
+    print(m,"\n")
+    d = obj.div()
+    print(d,"\n")
+    obj = Calculator(5,6)
+    a1 = obj.add()
+    print(a,"\n")
 
-    while choice != 0:
-        print("1. Addition")
-        print("2. Subtraction")
-        print("3. Multiplication")
-        print("4. Division")
-        print("0. Exit")
-        print(" ")
-        choice = int(input("Enter choice: "))
-        if choice == 1:
-            print("Result: ", obj.add())
-        elif choice == 2:
-            print("Result: ", obj.sub())
-        elif choice == 3:
-            print("Result: ", obj.mul())
-        elif choice == 4:
-            print("Result: ", round(obj.div(), 2))
-        elif choice == 0:
-            print("Calculator Exiting!")
-        else:
-            print("Invalid choice!!")
+    logging.basicConfig(filename="logFile.txt",
+                    filemode='a',
+                    format='%(asctime)s %(levelname)s-%(message)s',
+                    datefmt='%Y-%m-%d %H:%M:%S',level=logging.DEBUG)
+    logging.info(a)
+    logging.info(s)
+    logging.info(m)
+    logging.info(d)
+    logging.info(a1)
