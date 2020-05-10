@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "guptashubh/calculator"
-    registryCredential = 'gshubh'
+    registryCredential = 'dockerhub_credential'
     dockerImage = ''
   }
   agent any
