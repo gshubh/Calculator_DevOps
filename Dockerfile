@@ -1,6 +1,5 @@
 FROM ubuntu:18.04
-RUN apt-get update && \
-    apt-get install -y wget bash zip rsync python3-venv python3-dev build-essential
+RUN apt-get update && apt-get install python3.6
 ADD calculator.py /
 CMD [ "python", "./calculator.py"]
 EXPOSE 8180
